@@ -6,7 +6,7 @@ The manager of a industrial plant is planning to buy a machine of either type A 
 
 * The number of repairs, X, that machine A needs is a Poisson random variable with mean 0.88. The daily cost of operating 
     A is CA = 160 + 40X².
-The number of repairs, Y, that machine B needs is a Poisson random variable with mean 1.55. The daily cost of operating 
+* The number of repairs, Y, that machine B needs is a Poisson random variable with mean 1.55. The daily cost of operating 
     B is CB = 128 + 40Y².
 
 ```php
