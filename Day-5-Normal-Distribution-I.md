@@ -21,9 +21,7 @@ $_fp = fopen("php://stdin", "r");
 
 $l1 = fgets ($_fp);
 $l1 = explode (' ', $l1);
-
 $l2 = fgets ($_fp);
-
 $l3 = fgets ($_fp);
 $l3 = explode (' ', $l3);
 
@@ -50,8 +48,8 @@ $between_b = floatval (trim ($l3[1]));
 * @return float
 */
 function erf ($x) {
-    $t =1 / (1 + 0.5 * abs($x));
-    $tau = $t * exp(
+    $t =1 / (1 + 0.5 * abs ($x));
+    $tau = $t * exp (
             - $x * $x
             - 1.26551223
             + 1.00002368 * $t
@@ -71,7 +69,7 @@ function erf ($x) {
 }
 
 function normalDistribution ($x, $mean, $sdev) {   
-    return ((1/2) * (1 + erf(($x - $mean) / ($sdev * sqrt (2)))));
+    return ((1/2) * (1 + erf (($x - $mean) / ($sdev * sqrt (2)))));
 }
 
 // task 1
@@ -79,6 +77,6 @@ $calc_1 = normalDistribution ($less_then_x_hours, $mean, $standard_deviation);
 print_r (round ($calc_1, 3) . PHP_EOL);
 
 // task 2
-$calc_2 = (normalDistribution(22, $mean, $standard_deviation) - normalDistribution(20, $mean, $standard_deviation));
+$calc_2 = (normalDistribution (22, $mean, $standard_deviation) - normalDistribution (20, $mean, $standard_deviation));
 print_r (round ($calc_2, 3));
 ```
