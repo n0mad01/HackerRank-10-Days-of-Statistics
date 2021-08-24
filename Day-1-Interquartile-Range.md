@@ -2,6 +2,10 @@
 
 https://www.hackerrank.com/challenges/s10-interquartile-range/problem
 
+The interquartile range of an array is the difference between its first (Q1) and third (Q3) quartiles (i.e., Q3 - Q1).
+
+Given an array, values, of n integers and an array, freqs, representing the respective frequencies of values's elements, construct a data set, S, where each values[i] occurs at frequency freqs[i]. Then calculate and print S's interquartile range, rounded to a scale of 1 decimal place (i.e., 12.3 format).
+
 ```php
 <?php
 /*
@@ -10,6 +14,13 @@ https://www.hackerrank.com/challenges/s10-interquartile-range/problem
  * The function accepts following parameters:
  *  1. INTEGER_ARRAY values
  *  2. INTEGER_ARRAY freqs
+ */
+
+/**
+ *  given the input is:
+ *  6
+ *  6 12 8 10 20 16
+ *  5 4 3 2 1 5
  */
 
 function getQuartiles($arr) {
@@ -73,7 +84,7 @@ function quartiles($arr) {
     return $ret;
 }
 
-function interQuartile($values, $freqs) {
+function interQuartile ($values, $freqs) {
     // Print your answer to 1 decimal place within this function
     $arr = [];
     foreach ($freqs as $i => $f) {
@@ -91,15 +102,15 @@ function interQuartile($values, $freqs) {
     print_r (number_format ($iq, 1));
 }
 
-$n = intval(trim(fgets(STDIN)));
+$n = intval (trim (fgets (STDIN)));
 
-$val_temp = rtrim(fgets(STDIN));
+$val_temp = rtrim (fgets (STDIN));
 
-$val = array_map('intval', preg_split('/ /', $val_temp, -1, PREG_SPLIT_NO_EMPTY));
+$val = array_map ('intval', preg_split ('/ /', $val_temp, -1, PREG_SPLIT_NO_EMPTY));
 
-$freq_temp = rtrim(fgets(STDIN));
+$freq_temp = rtrim (fgets (STDIN));
 
-$freq = array_map('intval', preg_split('/ /', $freq_temp, -1, PREG_SPLIT_NO_EMPTY));
+$freq = array_map ('intval', preg_split ('/ /', $freq_temp, -1, PREG_SPLIT_NO_EMPTY));
 
-interQuartile($val, $freq);
+interQuartile ($val, $freq);
 ```

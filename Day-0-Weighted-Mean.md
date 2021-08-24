@@ -2,6 +2,8 @@
 
 https://www.hackerrank.com/challenges/s10-weighted-mean/problem
 
+Given an array, X, of N integers and an array, W, representing the respective weights of X's elements, calculate and print the weighted mean of X's elements. Your answer should be rounded to a scale of 1 decimal place (i.e., 12.3 format).
+
 ```php
 <?php
 
@@ -19,7 +21,7 @@ function weightedMean ($x, $w) {
        $sum += ($val * $w[$i]);
     }
     $wm = ($sum / array_sum ($w));
-    print_r (number_format($wm, 1));
+    print_r (number_format ($wm, 1));
 }
 
 $n = intval (trim (fgets(STDIN)));
