@@ -13,6 +13,12 @@ Given an array, arr, of n integers, calculate the respective first quartile (Q1)
  * The function accepts INTEGER_ARRAY arr as parameter.
  */
 
+/**
+ *  given the input is:
+ *  9
+ *  3 7 8 5 12 14 21 13 18
+ */
+
 function getQuartile ($arr, $quartile) {
   $pos = (count ($arr) - 1) * $quartile;
  

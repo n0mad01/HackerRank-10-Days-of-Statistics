@@ -9,12 +9,6 @@ Given an array, X, of N integers, calculate and print the respective mean, media
 $_fp = fopen("php://stdin", "r");
 /* Enter your code here. Read input from STDIN. Print output to STDOUT */
 
-/**
- *  given the input is:
- *  9
- *  3 7 8 5 12 14 21 13 18
- */
-
 $count = fgets ($_fp);
 $ints = fgets ($_fp);
 $arr = explode (' ', $ints);
